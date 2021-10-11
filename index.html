@@ -14,9 +14,9 @@
 	<!-- Swiper -->
 	<link rel="stylesheet" href="css/swiper.min.css">
 	<!-- Main Styles -->
-	<!-- <link rel="stylesheet" href="css/style.min.css"> -->
-	<link rel="stylesheet" href="css/style.css">	
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="css/main.css"> -->
 	<meta name="google-site-verification" content="pbhF5msWJdkdLRI78slCVSIhAhF7ggHidzLEMjWE_QM">
 	<meta name="google-site-verification" content="MqjjGhX2OV7RP92fsy4R3QecEPhkX3YX5S51ieeLU7c">
 	<meta name="yandex-verification" content="9e127be97174cc26" />
@@ -124,15 +124,15 @@
 	<div class="parallax"></div> -->
 
 	<div class="wrapper cd-section" id="section2">
-		<div class="container">
+		<div class="">
 			<div class="row">
-				<div class="col-md-8 offset-md-2">
-					<h2 class="lang" key="about">О нас</h2>
+				<div class="col-md-12 ">
+					<h2 class="lang mx-3" key="about">О нас</h2>
 				</div>
-				<div class="col-md-8 offset-md-2">
-					<p class="lang" key="about_text">Ещё со времён греческого философа Эпикура чёрная икра считалась синонимом изысканности и удовольствия. Спустя 2000 лет мы повторяем  этот принцип и делаем то, что называют доступной роскошью. Baku Caviar™ получают из классических каспийских осетров. Как ценители, мы гордимся тем, что нам удаётся поддерживать высокое качество и сохранять натуральный вкус.</p>
+				<div class="col-md-12 ">
+					<p class="lang mx-3" key="about_text">Ещё со времён греческого философа Эпикура чёрная икра считалась синонимом изысканности и удовольствия. Спустя 2000 лет мы повторяем  этот принцип и делаем то, что называют доступной роскошью. Baku Caviar™ получают из классических каспийских осетров. Как ценители, мы гордимся тем, что нам удаётся поддерживать высокое качество и сохранять натуральный вкус.</p>
 				</div>
-				<div class="col-md-8 offset-md-2">
+				<div class="col-md-12 ">
 					<div class="slider">
 						<!-- Swiper -->
 					  <div class="swiper-container">
@@ -160,10 +160,10 @@
 					<!-- Add Pagination -->
 					    <div class="swiper-pagination"></div>
 				</div>
-				<div class="col-md-8 offset-md-2 cd-section" id="section7">
+				<div class="col-md-12  cd-section" id="section7">
 					<h2 style="margin-top: 110px;" class="lang" key="our">Наследие</h2>
 				</div>
-				<div class="col-md-8 offset-md-2">
+				<div class="col-md-12 p">
 					<p class="lang" key="our_text">Мы ведём свою историю с 1954, когда впервые в Азербайджане был построен завод по разведению осетровых. Он расположен в Нефтчалинском районе в природном заповеднике на берегу Каспия, и мы до сих пор производим там нашу продукцию. В советское время нашу икру поставляли в Кремль. Также одним из самых известных поклонников именно нашей икры был Сэр Уинстон Черчилль. </p>
 				</div>
 			</div>
@@ -176,13 +176,13 @@
       class="swiper mySwiper2" id="mySwiper2"
     >
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background: url('/img/slider1.jpg'); background-size: cover;background-position: center;width: 20rem">
+        <div class="swiper-slide" style="background: url('/img/slider1.jpg'); background-size: cover;background-position: center;width: 40rem">
           
         </div>
-		<div class="swiper-slide" style="background: url('/img/slider2.jpg'); background-size: cover;background-position: top; width: 20rem;">
+		<div class="swiper-slide" style="background: url('/img/slider2.jpg'); background-size: cover;background-position: top; width: 40rem;">
 			
 		  </div>
-		  <div class="swiper-slide" style="background: url('/img/slider3.jpg'); background-size: cover;background-position: center; width: 20rem">
+		  <div class="swiper-slide" style="background: url('/img/slider3.jpg'); background-size: cover;background-position: center; width: 40rem">
 			
 		  </div>
       
@@ -457,10 +457,13 @@
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/swiper.min.js"></script>
 <script src="js/lang.js"></script>
-<script src="js/main.min.js"></script>
+<script src="js/main.js"></script>
+
+
 
 
 <script>
+
 	new Swiper('.swiper-container', {
 		pagination: {
 			el: '.swiper-pagination',
@@ -558,6 +561,7 @@
         accurateTrackBounce:true,
         webvisor:true
    });
+   
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/53233657" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->

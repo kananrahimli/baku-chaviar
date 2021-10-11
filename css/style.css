@@ -5,8 +5,9 @@
 body{
 	background-color: #FEF9EF;
   font-family: sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
+
 
 input{
   -webkit-appearance: none;
@@ -60,11 +61,11 @@ input{
   transform: scale(0.6);*/
 }
 .no-touch #cd-vertical-nav a:hover span:first-child {
-  background: white;
-  border-color: white;
+  background: #deb968;
+  border-color: #deb968;
 }
 .no-touch #cd-vertical-nav a span:last-child{
-  color: #00416a;
+  color: #deb968;
   float: left;
 }
 .no-touch #cd-vertical-nav a:hover span:last-child{
@@ -77,16 +78,16 @@ input{
   color: #dfba68;
 }
 .no-touch #cd-vertical-nav a.is-selected .cd-dot {
-  background-color: white;
-  border-color: white;
+  background-color: #deb968;
+  border-color: #deb968;
 }
 .not-scroll .is-selected .cd-dot{
-  background: #00416a !important;
-  border-color: #00416a !important;
+  background: #deb968 !important;
+  border-color: #deb968 !important;
 }
 .not-scroll #cd-vertical-nav a:hover .cd-dot{
-  background: #00416a !important;
-  border-color: #00416a !important;
+  background: #deb968 !important;
+  border-color: #deb968 !important;
 }
 .no-touch #cd-vertical-nav .cd-dot {
   position: relative;
@@ -131,17 +132,18 @@ input{
 
 .section-header{
 	height: 100vh;
-	background-color: #00416a;
+	background-color: #ffffff;
 }
 .section-header h1{
-	color: #deb968;
-	font-size: 36px;
-	font-weight: 500;
-	text-align: center;
-	font-family: 'NarzissProCyrillic-Medium', sans-serif;
+  color: #deb968;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-align: center;
+  font-family: "NarzissProCyrillic-Medium", sans-serif;
 }
 .active-lang{
-	color: #fff !important;
+	color: #000 !important;
 }
 .language button{
 	border: none;
@@ -154,10 +156,10 @@ input{
 	cursor: pointer;
 }
 .language button:hover{
-	color: #fff;
+	color: #000;
 }
 .language button:focus{
-	color: #fff;
+	color: #000;
 	outline: none;
 }
 .mb-logotype{
@@ -411,12 +413,26 @@ body.not-scroll {
     .header-responsive {
         display: block;
         position: fixed;
-        /*padding: 10px 0;*/
+        /* padding: 10px 0; */
         z-index: 9999;
         width: 100%;
         height: 90px;
-        background-color: #00416a;
+        background-color: rgba(255, 255, 255, 0.2) !important;
         top: 0;
+        transition: all 0.5s;
+    }
+
+    .header-responsive.fixed{
+      display: block;
+      position: fixed;
+      /* padding: 10px 0; */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      /* padding-top: 20px; */
+      z-index: 9999;
+      width: 100%;
+      height: 90px;
+      background-color: #ffffff !important;
+      top: 0;
     }
 }
 
@@ -513,17 +529,18 @@ body.not-scroll {
 }
 .wrapper h2{
 	font-size: 36px;
-	font-weight: 300;
-	font-family: 'NarzissProCyrillic-Medium', sans-serif;
-	color: #deb968;
-	margin: 28px 0;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-family: "NarzissProCyrillic-Medium", sans-serif;
+    color: #deb968;
+    margin: 28px 0;
 }
 .wrapper p{
 	font-size: 16px;
-	color: #fefefe;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 400;
-	line-height: 24px;
+    color: #000;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    line-height: 24px;
 }
 
 .second_img_bg{
@@ -546,10 +563,11 @@ body.not-scroll {
 	padding-bottom: 60px;
 }
 .wrapper-our-caviar h2{
-	font-family: 'NarzissProCyrillic-Medium', sans-serif;
-	font-size: 36px;
-	color: #fff;
-	font-weight: 500;
+	font-family: "NarzissProCyrillic-Medium", sans-serif;
+    font-size: 36px;
+    color: #deb968;
+    font-weight: 800;
+    letter-spacing: 3px;
 }
 .our-caviar-p{
 	font-size: 14px;
@@ -574,26 +592,27 @@ body.not-scroll {
 	padding-top: 110px;
 }
 .box h3{
-	font-family: 'NarzissProCyrillic-Medium', sans-serif;
-	color: #deb968;
-	font-size: 36px;
-	font-weight: 400;
+	font-family: "NarzissProCyrillic-Medium", sans-serif;
+    color: #deb968;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 3px;
 }
 .box span{
-	margin-top: 8px;
-	margin-bottom: 18px;
-	display: block;
-	font-family: 'Raleway', sans-serif;
-	font-size: 14px;
-	font-weight: 500;
-	color: #deb968;
+  margin-top: 8px;
+  margin-bottom: 18px;
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #deb968;
 }
 .box p{
-	font-family: 'Raleway', sans-serif;
-	color: #fff;
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 22px;
+  font-family: "Raleway", sans-serif;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
 }
 .box-line-1{
 	border-bottom: 1px solid #dfba68;
@@ -611,47 +630,48 @@ body.not-scroll {
 	margin-top: 90px;
 }
 .form_callback h3{
-	color: #00416a;
-	font-size: 36px;
-	font-weight: 500;
-	font-family: 'NarzissProCyrillic-Medium', sans-serif;
-	margin: 83px auto;
-	width: 70%;
+  color: #000;
+  font-size: 36px;
+  font-weight: 600;
+  font-family: "NarzissProCyrillic-Medium", sans-serif;
+  margin: 83px auto;
+  width: 70%;
 }
 .form_callback p{
-	font-family: 'Raleway', sans-serif;
-	font-size: 16px;
-	margin: 83px auto;
-	color: #00416a;
-	line-height: 24px;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  margin: 83px auto;
+  color: #000;
+  line-height: 24px;
 }
 .form_callback a{
-	font-family: 'Raleway', sans-serif;
-	font-size: 24px;
-	margin: 83px auto 27px;
-	color: #00416a;
-	text-decoration: none;
-	display: block;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  margin: 83px auto 27px;
+  color: #000;
+  text-decoration: none;
+  display: block;
 }
 .form_callback button{
-	width: 220px;
-	text-align: center;
-	color: #fefefe;
-	text-transform: uppercase;
-	font-family: 'Raleway', sans-serif;
-	font-size: 18px;
-	font-weight: 500;
-	height: 50px;
-	background-color: #dfba68;
-	border: none;
-	cursor: pointer;
+  width: 220px;
+  text-align: center;
+  color: #fefefe;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  height: 50px;
+  background-color: #dfba68;
+  border: 0;
+  cursor: pointer;
 }
 .nature{
-  font-family: 'NarzissProCyrillic-Medium', sans-serif;
-  font-size: 36px;
-  color: #fff;
-  font-weight: 500;
-  margin-bottom: 50px;
+  font-family: "NarzissProCyrillic-Medium", sans-serif;
+    font-size: 36px;
+    color: #dfba68;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
 }
 .third_img_bg img{
 	width: 100%;
@@ -662,12 +682,12 @@ body.not-scroll {
 	display: none;
 }
 .wrapper-how-buy p{
-	font-family: 'Raleway', sans-serif;
-	color: #fefefe;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 24px;
-	margin-top: 60px;
+  font-family: "Raleway", sans-serif;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 60px 0;
 }
 .where_buy{
 	background: url(../img/bg_4.jpg) no-repeat;
@@ -696,9 +716,9 @@ body.not-scroll {
 }
 
 footer{
-	/*height: 100vh;*/
-	position: relative;
-	padding-bottom: 157px;
+  height: 80vh;
+  position: relative;
+  background: #000;
 }
 .logo-footer{
 	/*margin-top: calc(50% - 170px);*/
@@ -751,6 +771,7 @@ html, body {
   height: 100%;
 }
 .swiper-container {
+  overflow-x: hidden;
   width: 100%;
   height: 100%;
 }
@@ -759,6 +780,7 @@ html, body {
 }
 .swiper-slide {
   text-align: center;
+  overflow-x: hidden;
   font-size: 18px;
   /* Center slide text vertically */
   display: -webkit-box;
@@ -981,20 +1003,23 @@ form button{
 
 
 #mySwiper2 .swiper {
+  overflow-x: hidden;
   width: 100%;
   height: 100%;
 }
 
 .mySwiper2{
   height: 30rem !important;
-  width: 60% !important;
+  width: 100% !important;
+
+  overflow-x: hidden;
 }
 
 #mySwiper2 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
-
+overflow-x: hidden;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1247,15 +1272,16 @@ form button{
 		margin-top: calc(50% - 90px);
 	}
 	.header-responsive {
-		height: 50px;
-		display: block;
-        position: fixed;
-        /*padding: 10px 0;*/
-        z-index: 9999;
-        width: 100%;
-        background-color: #00416a;
-        top: 0;
+    height: 50px;
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    /* overflow-x: hidden; */
+    background-color: #ffffff !important;
+    top: 10;
 	}
+  
 	.header-bar{
 		top: 16px;
 		right: 30px;

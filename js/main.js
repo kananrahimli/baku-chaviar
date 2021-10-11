@@ -123,9 +123,9 @@ $(window).scroll(function() {
      //>=, not <=
     if (scroll >= 5) {
         //clearHeader, not clearheader - caps H
-        $(".header-responsive").addClass("borderHeader");
+        $(".header-responsive").addClass("fixed");
     } else {
-        $(".header-responsive").removeClass("borderHeader");
+        $(".header-responsive").removeClass("fixed");
     }
 });
 
