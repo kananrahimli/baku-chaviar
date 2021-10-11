@@ -66,12 +66,12 @@ input {
   border-color: #deb968;
 }
 .not-scroll .is-selected .cd-dot {
-  background: #00416a !important;
-  border-color: #00416a !important;
+  background: #deb968 !important;
+  border-color: #deb968 !important;
 }
 .not-scroll #cd-vertical-nav a:hover .cd-dot {
-  background: #00416a !important;
-  border-color: #00416a !important;
+  background: #deb968 !important;
+  border-color: #deb968 !important;
 }
 .no-touch #cd-vertical-nav .cd-dot {
   position: relative;
@@ -95,7 +95,7 @@ input {
   position: relative;
   margin-right: 10px;
   padding: 0.4em 0.5em;
-  color: white;
+  color: #deb968 !important;
   font-size: 14px;
   font-size: 0.875rem;
   -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
@@ -114,6 +114,7 @@ input {
 .section-header {
   height: 100vh;
   background-color: #fef9ef;
+  overflow-x: hidden;
 }
 .section-header h1 {
   color: #deb968;
@@ -355,7 +356,7 @@ body.not-scroll {
     display: block;
     position: fixed;
     z-index: 9999;
-    width: 100%;
+    width: calc(100% - 15px) ;
     height: 90px;
     background-color: #fef9ef;
     top: 0;
@@ -396,9 +397,20 @@ body.not-scroll {
   text-align: center;
   background: url(../img/logo-chaviar.svg) 0 50% no-repeat;
   background-size: cover;
+  width: 10%;
   display: block;
   margin: 0 auto;
   height: 90px;
+}
+.banner-title{
+  position: absolute;
+  top: 50%;
+  z-index: 1000;
+}
+.banner-logo{
+  position: absolute;
+  top: 5%;
+  z-index: 1000;
 }
 .UpImg {
   background: url(../img/logo-chaviar.svg) 0 50% no-repeat !important;
@@ -424,6 +436,61 @@ body.not-scroll {
   -ms-flex-direction: column;
   -o-flex-direction: column;
   flex-direction: column;
+}
+#mySwiper2 .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.mySwiper2{
+  height: 30rem !important;
+  width: 60% !important;
+}
+
+#mySwiper2 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+#mySwiper2 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+#mySwiper2 .swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mySwiper2 .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+#mySwiper2 .mySwiper2 {
+  height: 80%;
+  width: 100%;
 }
 .pattern {
   background: url(../img/uzor_svg.svg);
@@ -629,7 +696,13 @@ footer {
   margin-top: 15%;
   text-align: center;
 }
-.adress,
+
+.adress, .footer-phone, .instagram {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 100px;
+}
 .instagram {
   display: -webkit-flex;
   display: -moz-flex;
@@ -642,7 +715,7 @@ footer {
 }
 footer a,
 footer p {
-  margin-left: 20px;
+  margin-left: 10px;
   color: #fefefe;
   font-family: "Raleway", sans-serif;
   font-size: 24px;
@@ -863,6 +936,18 @@ form button {
   }
 }
 @media (max-width: 767px) {
+  .adress, .mail, .instagram, .footer-phone, .facebook {
+    margin-top: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: flex-start;
+}
+  .mySwiper2{
+    height: 20rem !important;
+    width: 100% !important;
+    
+  }
   footer {
     height: 110vh;
     position: relative;
@@ -1014,6 +1099,10 @@ form button {
   .third_img_bg {
     display: none;
   }
+  .wrapper-how-buy{
+    background-color: #fef9ef !important;
+
+  }
   .wrapper-how-buy p {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -1027,6 +1116,7 @@ form button {
     position: fixed;
     z-index: 9999;
     width: 100%;
+    overflow-x: hidden;
     background-color: #fef9ef;
     top: 0;
   }
