@@ -543,8 +543,10 @@ body.not-scroll {
 .wrapper-our-caviar h2 {
   font-family: "NarzissProCyrillic-Medium", sans-serif;
   font-size: 36px;
-  color: #fff;
-  font-weight: 500;
+  color: #deb968;
+  font-weight:800 ;
+  letter-spacing: 3px;
+  
 }
 .our-caviar-p {
   font-size: 14px;
@@ -553,6 +555,10 @@ body.not-scroll {
   font-family: "Raleway", sans-serif;
   color: #c79a3b;
   line-height: 22px;
+  
+    
+    /* display: block; */
+    width: 50%;
 }
 .box {
   padding-left: 10px;
@@ -657,6 +663,7 @@ body.not-scroll {
 .mb-img-how {
   display: none;
 }
+
 .wrapper-how-buy p {
   font-family: "Raleway", sans-serif;
   color: #000;
@@ -952,7 +959,7 @@ form button {
     height: 110vh;
     position: relative;
     background: #000;
-    margin-top: 70px;
+    margin-top: 20px;
   }
   .where_buy p {
     font-family: "Raleway", sans-serif;
