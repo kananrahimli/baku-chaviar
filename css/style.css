@@ -3,7 +3,7 @@
 	margin: 0;
 }
 body{
-	background-color: #FEF9EF;
+	background-color: #FffffF;
   font-family: sans-serif;
   overflow-x: hidden !important;
 }
@@ -177,7 +177,7 @@ input{
     overflow: auto;
     z-index: 9999;
     min-width: 320px;
-    background-color: #fff5f5;
+    background-color: #ffffff;
     -webkit-transition: all 0.4s;
        -moz-transition: all 0.4s;
             transition: all 0.4s;
@@ -409,6 +409,20 @@ body.not-scroll {
     display: none;
 } 
 
+
+.logo-img{
+  width: 100%;
+  /* height: 200px; */
+  position: absolute;
+  top: -165px;
+  right: 0;
+}
+.logo-img img{
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+}
+
 @media (min-width: 575px) {
     .header-responsive {
         display: block;
@@ -540,6 +554,7 @@ body.not-scroll {
     color: #000;
     font-family: "Raleway", sans-serif;
     font-weight: 400;
+    margin-bottom: 35px;
     line-height: 24px;
 }
 
@@ -561,6 +576,7 @@ body.not-scroll {
 .wrapper-our-caviar{
 	padding-top: 110px;
 	padding-bottom: 60px;
+  background-color: #ffffff;
 }
 .wrapper-our-caviar h2{
 	font-family: "NarzissProCyrillic-Medium", sans-serif;
@@ -581,6 +597,7 @@ body.not-scroll {
 .box{
 	padding-left: 20px;
 	padding-right: 20px;
+  position: relative;
 }
 .mt-6{
 	margin-top: 60px;
@@ -597,6 +614,7 @@ body.not-scroll {
     font-size: 36px;
     font-weight: 600;
     letter-spacing: 3px;
+    margin-top: 175px;
 }
 .box span{
   margin-top: 8px;
@@ -699,6 +717,8 @@ body.not-scroll {
 .where_buy h2{
 	font-family: 'NarzissProCyrillic-Medium', sans-serif;
 	color: #deb968;
+  font-weight: 900 !important;
+  letter-spacing: 2px;
 	font-size: 36px;
 	font-weight: 500;
 }
@@ -752,7 +772,7 @@ footer a, footer p{
 	margin-left: 20px;
 	color: #fefefe;
 	font-family: 'Raleway', sans-serif;
-	font-size: 24px;
+	font-size: 16px;
 	font-weight: 400;
 	text-decoration: none;
   margin-top: -2px;
@@ -761,7 +781,7 @@ footer a:hover{
   color: #dfba68;
 }
 .adress p{
-	/*font-size: 16px;*/
+	font-size: 16px;
   line-height: 30px;
 }
 
@@ -1009,13 +1029,15 @@ form button{
 }
 
 .mySwiper2{
-  height: 30rem !important;
+  height: 25rem !important;
   width: 100% !important;
 
   overflow-x: hidden;
 }
 
 #mySwiper2 .swiper-slide {
+  width: 25rem;
+  height: 100%;
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -1046,7 +1068,7 @@ overflow-x: hidden;
 
 #mySwiper2 .swiper {
   width: 100%;
-  height: 300px;
+  /* height: 300px; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -1116,13 +1138,19 @@ overflow-x: hidden;
   }
 }
 @media (max-width: 767px) {
+ 
   .mySwiper2{
     height: 20rem !important;
+    overflow-x: hidden;
     width: 100% !important;
     
   }
+
+  .mySwiper2 .swiper-slide{
+    width: 100%;
+  }
   .second_img_bg {
-    padding: 14px;
+    padding: 0px;
   }
   .d-b-index{
     display: block;
@@ -1130,6 +1158,15 @@ overflow-x: hidden;
   /*.d-none-index{
     display: none !important;
   }*/
+
+  .where_buy p{
+    font-family: 'Raleway', sans-serif;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 28px 0;
+  }
   #cd-vertical-nav{
     display: none;
   }
