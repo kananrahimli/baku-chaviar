@@ -405,9 +405,9 @@ body.not-scroll {
     margin-left: 20px;
 }
 
-.header-responsive {
+/* .header-responsive {
     display: none;
-} 
+}  */
 
 
 .logo-img{
@@ -1313,11 +1313,12 @@ overflow-x: hidden;
     display: block;
     position: fixed;
     z-index: 9999;
-    width: 100%;
-    /* overflow-x: hidden; */
+    width: calc(100% - 15px);
+    overflow-x: hidden;
     background-color: #ffffff !important;
-    top: 10;
+   
 	}
+  
   
 	.header-bar{
 		top: 16px;
