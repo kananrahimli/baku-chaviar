@@ -1142,6 +1142,10 @@ overflow-x: hidden;
   }
 }
 @media (max-width: 767px) {
+
+  html{
+    overflow-x: hidden !important;
+  }
  
   .mySwiper2{
     height: 20rem !important;
@@ -1317,7 +1321,7 @@ overflow-x: hidden;
     display: block;
     position: fixed;
     z-index: 9999;
-    width: calc(100% - 15px);
+    width: 100% ;
     overflow-x: hidden;
     background-color: #ffffff !important;
    
