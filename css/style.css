@@ -643,7 +643,7 @@ body.not-scroll {
 	border-right: 1px solid #dfba68;
 }
 .form_callback{
-	background: #fff5f5;
+	background: #ffffff;
 	height: 252px;
 	margin-top: 90px;
 }
@@ -850,10 +850,10 @@ form input{
   border: none;
   background: transparent;
   height: 40px;
-  border-bottom: 2px solid #00416a;
+  border-bottom: 2px solid #000;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
-  color: #00416a;
+  color: #0000;
   font-weight: 500;
   /* width: 220px; */
   width: 100%;
@@ -881,7 +881,7 @@ form button{
 }
 
 .mb-modal__form{
-  background-color: #fff5f5;
+  background-color: #ffffff;
   width: 50%;
   position: fixed;
   top: 0;
@@ -917,7 +917,7 @@ form button{
 .mb-modal__name{
   margin: 60px auto;
   text-align: center;
-  color: #00416a;
+  color: #000;
   font-size: 36px;
   font-weight: 500;
   font-family: 'NarzissProCyrillic-Medium', sans-serif;
@@ -928,7 +928,7 @@ form button{
   opacity: .5;
   font-size: 14px;
   font-weight: 400;
-  color: #00416a;
+  color: #000;
 }
 
 .mb-modal__block-adress{
@@ -944,14 +944,14 @@ form button{
   opacity: .5;
   font-size: 14px;
   font-weight: 400;
-  color: #00416a;
+  color: #000;
 }
 .mb-modal__block-adress p{
   font-family: 'Raleway', sans-serif;
   opacity: .5;
   font-size: 14px;
   font-weight: 400;
-  color: #00416a;
+  color: #000;
 }
 .mb-modal__block-select{
   margin-top: 60px;
@@ -962,15 +962,15 @@ form button{
   opacity: .5;
   font-size: 14px;
   font-weight: 400;
-  color: #00416a;
+  color: #000;
 }
 
 .mb-modal__block-select select{
   border: none;
-  border-bottom: 2px solid #00416a;
+  border-bottom: 2px solid #000;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
-  color: #00416a;
+  color: #000;
   font-weight: 500;
   width: 100%;
   background: transparent;
@@ -988,8 +988,12 @@ form button{
   font-family: "Raleway";
   font-weight: 500;
   font-size: 16px;
-  color: #00416a;
-  border-color: #eee;
+  color: #000;
+  border-color: #000;
+}
+
+.mb-modal__block-select select option{
+  color: #000 !important;
 }
 
 .mb-modal__block-send{
@@ -1342,7 +1346,7 @@ overflow-x: hidden;
   }
   /* form */
   .mb-modal__form{
-    width: 290px;
+    width: 85%;
   }
   .mb-modal__name{
     width: 70%;
