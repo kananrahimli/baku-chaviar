@@ -96,7 +96,7 @@
 		<div class="">
 
 			<div class="row position-relative px-0">
-				<div class="swiper mySwiper" id="banner-swiper">
+				<div class="swiper " id="banner-swiper">
 					<div class="swiper-wrapper banner-swiper-wrapper">
 					  <div class="swiper-slide banner-swiper-slide" style="background: url('/img/banner1-min.jpg'); background-size: cover; background-position: center;"></div>
 					  <div class="swiper-slide banner-swiper-slide" style="background: url('/img/banner2-min.jpg'); background-size: cover; background-position: center;"></div>
@@ -133,32 +133,32 @@
 					<p class="lang mx-md-5 mx-2" key="about_text">Ещё со времён греческого философа Эпикура чёрная икра считалась синонимом изысканности и удовольствия. Спустя 2000 лет мы повторяем  этот принцип и делаем то, что называют доступной роскошью. Baku Caviar™ получают из классических каспийских осетров. Как ценители, мы гордимся тем, что нам удаётся поддерживать высокое качество и сохранять натуральный вкус.</p>
 				</div>
 				<div class="col-md-12 ">
-					<div class="slider">
-						<!-- Swiper -->
-					  <div class="swiper-container">
-					    <div class="swiper-wrapper">
-					      <div class="swiper-slide" style="background-image: url('/img/02.png'); background-position: center; background-size: cover; height: 25rem;">
-					      	<!-- <img src="img/01.png" alt=""> -->
-					      </div>
-					      <div class="swiper-slide" style="background-image: url('/img/02.png'); background-position: center; background-size: cover; height: 25rem;">
-					      	<!-- <img src="img/02.png" alt=""> -->
-					      </div>
-					      <div class="swiper-slide" style="background-image: url('/img/03.png'); background-position: center; background-size: cover;height: 25rem;">
-					      	<!-- <img src="img/03.png" alt=""> -->
-					      </div>
-					      <div class="swiper-slide" style="background-image: url('/img/04.png'); background-position: center; background-size: cover;height: 25rem;">
-					      	<!-- <img src="img/04.png" alt=""> -->
-					      </div>
-					      <div class="swiper-slide" style="background-image: url('/img/05.png'); background-position: center; background-size: cover;height: 25rem;	">
-					      	<!-- <img src="img/05.png" alt=""> -->
-					      </div>
-					    </div>
-					    <div class="swiper-button-next"></div>
-    					<div class="swiper-button-prev"></div>
+					<div
+					style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;;"
+					class="swiper mySwiper2" id="mySwiper2"
+				  >
+					<div class="swiper-wrapper">
+					  <div class="swiper-slide" style="background: url('/img/01.jpg'); background-size: cover;background-position: center;">
+						
 					  </div>
+					  <div class="swiper-slide" style="background: url('/img/02.png'); background-size: cover;background-position: center; ">
+						  
+						</div>
+						<div class="swiper-slide" style="background: url('/img/03.png'); background-size: cover;background-position: center; ">
+						  
+						</div>
+						<div class="swiper-slide" style="background: url('/img/04.png'); background-size: cover;background-position: center; ">
+						  
+						</div>
+						<div class="swiper-slide" style="background: url('/img/05.png'); background-size: cover;background-position: center; ">
+						  
+						</div>
+					
 					</div>
-					<!-- Add Pagination -->
-					    <div class="swiper-pagination"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				  </div>
+				 
 				</div>
 				<div class="col-md-12  cd-section" id="section7">
 					<h2 style="margin-top: 110px; " class="lang mx-md-5 mx-2" key="our">Наследие</h2>
@@ -468,22 +468,22 @@
 
 <script>
 
-	new Swiper('.swiper-container', {
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-		},
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		autoplay: {
-			delay: 5000,
-		},
-	});
+	// new Swiper('.swiper-container', {
+	// 	pagination: {
+	// 		el: '.swiper-pagination',
+	// 		clickable: true,
+	// 	},
+	// 	navigation: {
+	// 		nextEl: '.swiper-button-next',
+	// 		prevEl: '.swiper-button-prev',
+	// 	},
+	// 	autoplay: {
+	// 		delay: 5000,
+	// 	},
+	// });
 
 	 
-    new Swiper("#mySwiper2", {
+    new Swiper(".mySwiper2", {
 		effect: "coverflow",
 		grabCursor: true,
         centeredSlides: true,
@@ -498,11 +498,11 @@
         loop: true,
         spaceBetween: 10,
         navigation: {
-          nextEl: "#mySwiper2 .swiper-button-next",
-          prevEl: "#mySwiper2  .swiper-button-prev",
+          nextEl: ".mySwiper2 .swiper-button-next",
+          prevEl: ".mySwiper2  .swiper-button-prev",
         },
 		pagination: {
-			el: '#mySwiper2 .swiper-pagination',
+			el: '.mySwiper2 .swiper-pagination',
 			clickable: true,
 		},
 		autoplay: true
