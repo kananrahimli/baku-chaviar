@@ -412,16 +412,64 @@ body.not-scroll {
 
 
 .logo-img{
-  width: 100%;
-  /* height: 200px; */
+  width: 30%;
+  height: auto;
   position: absolute;
   top: -165px;
-  right: 0;
+  left: 50%;
+  transform: translate(-50%,0);
 }
 .logo-img img{
   width: 100%;
   /* height: 100%; */
   object-fit: cover;
+}
+
+
+.image-container{
+  position: relative;
+  overflow: hidden !important;
+  cursor: pointer;
+}
+
+.second_img_bg .image-container{
+  height: 15rem;
+  position: relative;
+  overflow:hidden;
+}
+
+
+
+.image-container .image-container-effect{
+  position: absolute;
+  top: 0;
+  width: calc(100% - 30px);
+  height: 100%;
+  background-color: #deb968 ;
+  opacity: 0.5;
+  transition: 0.5s;
+  display: none;
+}
+
+.image-container:hover .image-container-effect{
+  display: block;
+  animation: hoverCard 0.5s ease;
+}
+
+@keyframes hoverCard{
+  0%{
+    display: none;
+    transform: scale(0);
+  }
+  
+  100%{
+    display: block;
+    transform: scale(1);
+  }
+}
+
+.image-container-effect2{
+  height: 100% !important;
 }
 
 @media (min-width: 575px) {
@@ -432,7 +480,7 @@ body.not-scroll {
         z-index: 9999;
         width: 100%;
         height: 90px;
-        background-color: rgba(255, 255, 255, 0.2) !important;
+        /* background-color: rgba(255, 255, 255, 0.2) !important; */
         top: 0;
         transition: all 0.5s;
     }
@@ -487,10 +535,10 @@ body.not-scroll {
 }
 .logotype{
 	text-align: center;
-	background: url(../img/logo-chaviar.svg) 0 50% no-repeat;
+	background: url(../img/logo-chaviar.svg) 50% 50% no-repeat;
 	width: 120px;
 	height: 100%;
-	background-size: contain;
+	background-size: cover;
 	display: block;
 	margin: 0 auto;
 	height: 90px;
@@ -672,15 +720,15 @@ body.not-scroll {
   display: block;
 }
 .form_callback button{
-  width: 220px;
+  width: auto !important;
   text-align: center;
-  color: #fefefe;
+  color: #d19f34;
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   font-weight: 500;
   height: 50px;
-  background-color: #dfba68;
+  background-color: #fff;
   border: 0;
   cursor: pointer;
 }
@@ -733,17 +781,18 @@ body.not-scroll {
 }
 
 .css-height{
-	margin-bottom: 100px;
+	margin-bottom: 0px !important;
 }
 
 footer{
-  height: 80vh;
+  /* height: 80vh; */
   position: relative;
-  background: #000;
+  background: #e8e0c6;
+  padding: 3rem 0  !important;
 }
 .logo-footer{
 	/*margin-top: calc(50% - 170px);*/
-	margin-top: 15%;
+	margin-top: 0 !important;
 	text-align: center;
 }
 .adress, .footer-phone, .instagram{
@@ -764,14 +813,14 @@ footer{
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  margin-top: 35px;
+  margin-top: 105px;
 }
 .facebook{
   margin-left: 50px;
 }
 footer a, footer p{
 	margin-left: 20px;
-	color: #fefefe;
+	color: #000;
 	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
@@ -779,13 +828,25 @@ footer a, footer p{
   margin-top: -2px;
 }
 footer a:hover{
-  color: #dfba68;
+  color: #bd9b52;
 }
 .adress p{
 	font-size: 16px;
   line-height: 30px;
 }
-
+.sub-footer p{
+  color: #d19f34;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.sub-footer-social a{
+   color: #000;
+   font-size: 20px;
+   transition: 0.5s;
+}
+.sub-footer-social a:hover{
+  color: #deb968;
+}
 /* Swiper */
 html, body {
   position: relative;
@@ -1112,14 +1173,14 @@ overflow-x: hidden;
 }
 
 
-.banner-title{
+/* .banner-title{
   position: absolute;
   top: 50%;
   z-index: 1000;
-}
+} */
 .banner-logo{
   position: absolute;
-  top: 5%;
+  /* top: 5%; */
   z-index: 1000;
 }
 
@@ -1143,6 +1204,13 @@ overflow-x: hidden;
   }
 }
 @media (max-width: 767px) {
+  .section-header h1{
+		font-size: 24px;
+	}
+
+  .banner-title{
+    margin-top: 10rem;
+  }
 
   html{
     overflow-x: hidden !important;
@@ -1245,7 +1313,7 @@ overflow-x: hidden;
 		height: 490px;
 	}
   footer{
-    height: 100vh;
+    height: auto !important;
   }
 	.adress, .mail, .instagram, .footer-phone, .facebook{
 		margin-top: 30px;
@@ -1283,7 +1351,17 @@ overflow-x: hidden;
     display: none;
   }
 }
+@media (max-width: 768px) {
+  .image-container-effect2{
+    height: 100% !important;
+  }
+
+  .image-container img{
+    height: 100% !important;
+  }
+}
 @media (max-width: 575px) {
+ 
 	.language{
 		/*margin-left: 30px;*/
 		height: 50px;
@@ -1385,7 +1463,7 @@ overflow-x: hidden;
 		margin-top: calc(50% - 30px);
 	}
 	.section-header h1{
-		font-size: 30px;
+		font-size: 24px;
 	}
   .form_callback{
     height: 430px;
