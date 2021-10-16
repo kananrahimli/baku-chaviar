@@ -83,6 +83,13 @@ $(document).ready(function() {
         }
     });
 
+    
+    // $("a[data-lightbox='mygallery']").click(function(){
+    //     console.log($(window).scrollTop()=0);
+
+    //     console.log('sksksks');
+    // })
+
     $(document).click(function(e){
         $('.select__title').removeClass('active');
         $('.select__list').removeClass('active');
