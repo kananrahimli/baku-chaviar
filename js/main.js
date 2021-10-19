@@ -167,15 +167,15 @@ jQuery(document).ready(function($){
     });
 
     //smooth scroll to the section
-    navigationItems.on('click', function(event){
-        event.preventDefault();
-        smoothScroll($(this.hash));
-    });
-    //smooth scroll to second section
-    $('.cd-scroll-down').on('click', function(event){
-        event.preventDefault();
-        smoothScroll($(this.hash));
-    });
+    // navigationItems.on('click', function(event){
+    //     event.preventDefault();
+    //     smoothScroll($(this.hash));
+    // });
+    // //smooth scroll to second section
+    // $('.cd-scroll-down').on('click', function(event){
+    //     event.preventDefault();
+    //     smoothScroll($(this.hash));
+    // });
 
     //open-close navigation on touch devices
     $('.touch .cd-nav-trigger').on('click', function(){
