@@ -112,32 +112,32 @@
 				<div class="swiper " id="banner-swiper">
 					<div class="swiper-wrapper banner-swiper-wrapper">
 						<div class="swiper-slide banner-swiper-slide"
-							style="background: url('/img/banner2.jpg'); background-size: cover; background-position: center;">
+							style="background: url('/img/main1.jpg'); background-size: cover; background-position: center;">
 							<div class="col-md-6 banner-title ">
 								<h1 class="lang" key="h1">Натуральная, традиционная, вкусная чёрная икра
 								</h1>
 							</div>
 						</div>
 						<div class="swiper-slide banner-swiper-slide"
-							style="background: url('/img/banner1.jpg'); background-size: cover; background-position: center;">
+							style="background: url('/img/main2.jpg'); background-size: cover; background-position: center;">
 							<div class="col-md-6 banner-title ">
 								<h1 class="lang" key="h1">Натуральная, традиционная, вкусная чёрная икра</h1>
 							</div>
 						</div>
 						<div class="swiper-slide banner-swiper-slide"
-							style="background: url('/img/banner3.jpg'); background-size: cover; background-position: center;">
+							style="background: url('/img/main3.jpg'); background-size: cover; background-position: center;">
 							<div class="col-md-6  banner-title ">
 								<h1 class="lang " key="h1">Натуральная, традиционная, вкусная чёрная икра
 								</h1>
 							</div>
 						</div>
-						<div class="swiper-slide banner-swiper-slide"
+						<!-- <div class="swiper-slide banner-swiper-slide"
 							style="background: url('/img/banner4.jpg'); background-size: cover; background-position: center;">
 							<div class="col-md-6  banner-title ">
 								<h1 class="lang " key="h1">Натуральная, традиционная, вкусная чёрная икра
 								</h1>
 							</div>
-						</div>
+						</div> -->
 					</div>
 					<!-- <div class="swiper-button-prev mx-4 swiper-button-black"></div>
   					<div class="swiper-button-next mx-4 swiper-button-black"></div> -->
@@ -456,7 +456,7 @@
 		</div>
 	</div>
 
-	<div class="where_buy cd-section" id="section5">
+	<!-- <div class="where_buy cd-section" id="section5">
 		<div class="container px-0">
 			<div class="row ">
 				<div class="col-md-6 offset-md-2">
@@ -472,10 +472,46 @@
 			</div>
 			<div class="row mb-img">
 				<div class="col-12">
-					<img src="img/bg_4.jpg" alt="">
+					<img src="img/banner1.jpg" alt="">
 				</div>
 			</div>
 		</div>
+	</div> -->
+
+	<div class="row position-relative px-0 where-buy mb-5">
+		
+		<div class="swiper " id="last-swiper">
+			<div class="col-8 title-container">
+				<h2 class="lang px-md-0 px-2 mx-md-0 mx-2" key="buy">Где купить</h2>
+			<p class="lang" key="buy_text">Купить и попробовать нашу икру вы можете в лучших отелях и ресторанах
+				города Баку и Азербайджана. Если вы не успели приобрести Baku Caviar™ в городе, то вы всегда
+				сможете это сделать в Duty Free Shop международного аэропорта имени Гейдар Алиева г. Баку. </p>
+			
+			</div>
+			<div class="swiper-wrapper last-swiper-wrapper">
+				<div class="swiper-slide last-swiper-slide"
+					style="background: url('/img/banner1.jpg'); background-size: cover; background-position: center;">
+					
+				</div>
+				<div class="swiper-slide last-swiper-slide"
+					style="background: url('/img/banner2.jpg'); background-size: cover; background-position: center;">
+					
+				</div>
+				<div class="swiper-slide last-swiper-slide"
+					style="background: url('/img/banner3.jpg'); background-size: cover; background-position: center;">
+					
+				</div>
+				<div class="swiper-slide banner-swiper-slide"
+					style="background: url('/img/banner4.jpg'); background-size: cover; background-position: center;">
+					
+				</div>
+			</div>
+			<!-- <div class="swiper-button-prev mx-4 swiper-button-black"></div>
+			  <div class="swiper-button-next mx-4 swiper-button-black"></div> -->
+			<div class="swiper-pagination"></div>
+		</div>
+		
+
 	</div>
 
 	<footer class="cd-section">
@@ -697,6 +733,21 @@
 			speed: 4000,
 			pagination: {
 				el: "#banner-swiper .swiper-pagination",
+				clickable: true,
+			},
+		});
+		new Swiper("#last-swiper", {
+			// direction: "vertical",
+			// effect: "fade",
+			loop: true,
+			navigation: {
+				nextEl: "#last-swiper .swiper-button-next",
+				prevEl: "#last-swiper .swiper-button-prev",
+			},
+			autoplay: true,
+			speed: 4000,
+			pagination: {
+				el: "#last-swiper .swiper-pagination",
 				clickable: true,
 			},
 		});

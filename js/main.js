@@ -226,15 +226,16 @@ $(document).ready(function(){
     
     /* Modal styles, show & hide*/ 
     $('.callback-button').on('click', function(){
-        $('.mb-modal').show();
+        $('.mb-modal').addClass('show');
+        console.log('akakakak');
         $('.mb-modal__overlay').show();
     });
     $('.mb-modal__close').on('click', function(){
-        $('.mb-modal').hide();
+        $('.mb-modal').removeClass('show');
         $('.mb-modal__overlay').hide();
     });
     $('.mb-modal__overlay').on('click', function(){
-        $('.mb-modal').hide();
+        $('.mb-modal').removeClass('show');
         $(this).hide();
     });
 

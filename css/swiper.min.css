@@ -10,7 +10,7 @@
  * Released on: February 22, 2019
  */
 .mySwiper2,
-#banner-swiper {
+#banner-swiper,#last-swiper {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -699,12 +699,12 @@ button.swiper-pagination-bullet {
 .swiper-container-coverflow .swiper-wrapper {
   -ms-perspective: 1200px;
 }
-.banner-swiper-slide {
+.banner-swiper-slide,.last-swiper-slide {
   height: 100% !important;
   width: 100% !important;
   margin-top: 0 !important;
 }
-.banner-swiper-wrapper {
-  height: 100vh;
+.banner-swiper-wrapper,.last-swiper-wrapper {
+  height: 100vh !important;
   width: 100vw;
 }
