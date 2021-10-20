@@ -433,13 +433,35 @@ body.not-scroll {
   position: relative;
   overflow: hidden !important;
   cursor: pointer;
+  margin: 3rem 0 !important;
 }
 
+
+
 .second_img_bg .image-container{
-  height: 15rem;
+  /* height: 15rem; */
   position: relative;
   overflow:hidden;
 }
+
+.card-image{
+  height: 30rem;
+}
+.image-container .card-image img{
+  object-fit: cover;
+}
+
+.card-text{
+  font-family: "Raleway", sans-serif !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  font-size: 18px !important;
+  color: rgb(31, 30, 30) !important;
+}
+.image-container:nth-of-type(odd) .card-image{
+  order: 2 !important;
+}
+
 
 
 
@@ -480,10 +502,11 @@ body.not-scroll {
         display: block;
         position: fixed;
         /* padding: 10px 0; */
+        padding-top: 7px;
         z-index: 9999;
         width: 100%;
-        height: 90px;
-        /* background-color: rgba(255, 255, 255, 0.2) !important; */
+        height: 105px;
+        background-color: #FffffF !important;
         top: 0;
         transition: all 0.5s;
     }
@@ -496,7 +519,7 @@ body.not-scroll {
       /* padding-top: 20px; */
       z-index: 9999;
       width: 100%;
-      height: 90px;
+      height: 105px;
       background-color: #ffffff !important;
       top: 0;
     }
@@ -1233,6 +1256,14 @@ overflow-x: hidden;
   }
 }
 @media (max-width: 767px) {
+  .image-container:nth-of-type(odd) .card-image{
+    
+    order: 0 !important;
+  }
+  .image-container .card-image{
+    height: 20rem;
+    margin-bottom: 2rem;
+  }
   .section-header h1{
 		font-size: 24px;
 	}
