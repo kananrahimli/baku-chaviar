@@ -78,7 +78,7 @@ $(document).ready( async function(){
             prevEl: ".banner-swiper1 .swiper-button-prev",
         },
         autoplay: true,
-        speed: 4000,
+        speed: 2000,
         pagination: {
             el: ".banner-swiper1 .swiper-pagination",
             clickable: true,
