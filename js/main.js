@@ -1,4 +1,106 @@
 
+// import { realDb } from "./firebase";
+
+ var bannerDatas = [
+    
+]
+
+
+$(document).ready( async function(){
+    
+        var response = await fetch('https://baku-caviar-ba330-default-rtdb.firebaseio.com/dataCount.json')
+        var responseData= await response.json()
+
+        var demo=[]
+        for (const key in responseData) {
+            let blog = {
+              id: responseData[key].id,
+              title: responseData[key].title,
+              photo:responseData[key].imageUrl,
+            };
+    
+            demo.push(blog);
+          }
+
+          bannerDatas=demo;
+          console.log(bannerDatas);
+
+     
+    
+    
+
+   await bannerDatas.forEach((data) => {
+        $('.banner-swiper-wrapper').append(`
+        <div class="swiper-slide banner-swiper-slide"
+        s>
+        <img src="${data.photo}" class="banner-image" alt="">
+        <div class="col-md-6 banner-title ">
+            <h1 class="lang" key="h1">${data.title}
+            </h1>
+        </div>
+         </div>
+   `)
+
+    })
+
+    // new Swiper(".mySwiper2", {
+        
+    //     navigation: {
+    //         nextEl: ".mySwiper2 .swiper-button-next",
+    //         prevEl: ".mySwiper2  .swiper-button-prev",
+    //     },
+    //     // pagination: {
+    //     //     el: '.mySwiper2 .swiper-pagination',
+    //     //     clickable: true,
+    //     // },
+    //     // speed: 2000,
+    //     // autoplay: true
+    // });
+
+    new Swiper("#banner-swiper", {
+        // direction: "vertical",
+        // effect: "fade",
+        loop: true,
+       
+        autoplay: true,
+        speed: 4000,
+        pagination: {
+            el: "#banner-swiper .swiper-pagination",
+            clickable: true,
+        },
+    });
+    new Swiper(".banner-swiper1", {
+        // direction: "vertical",
+        // effect: "fade",
+        loop: true,
+        navigation: {
+            nextEl: ".banner-swiper1 .swiper-button-next",
+            prevEl: ".banner-swiper1 .swiper-button-prev",
+        },
+        autoplay: true,
+        speed: 4000,
+        pagination: {
+            el: ".banner-swiper1 .swiper-pagination",
+            clickable: true,
+        },
+    });
+    new Swiper("#last-swiper", {
+        // direction: "vertical",
+        // effect: "fade",
+        loop: true,
+        navigation: {
+            nextEl: "#last-swiper .swiper-button-next",
+            prevEl: "#last-swiper .swiper-button-prev",
+        },
+        autoplay: true,
+        speed: 4000,
+        pagination: {
+            el: "#last-swiper .swiper-pagination",
+            clickable: true,
+        },
+    });
+})
+
 $(document).ready(function() {
     
 /*  ======================================================================
@@ -218,6 +320,8 @@ $(document).ready(function(){
             $('#cd-vertical-nav').hide();
         }
     });
+
+  
 });
 
 /* form */
@@ -262,6 +366,8 @@ $(document).ready(function(){
     }
     );
 })
+
+
 
 
 

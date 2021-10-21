@@ -458,9 +458,7 @@ body.not-scroll {
   font-size: 18px !important;
   color: rgb(31, 30, 30) !important;
 }
-.image-container:nth-of-type(odd) .card-image{
-  order: 2 !important;
-}
+
 
 
 
@@ -733,7 +731,7 @@ body.not-scroll {
 .form_callback p{
   font-family: "Raleway", sans-serif;
   font-size: 16px;
-  margin: 83px auto;
+  margin: 83px auto 20px;
   color: #000;
   line-height: 24px;
 }
@@ -1234,6 +1232,10 @@ overflow-x: hidden;
   position: absolute;
   /* top: 5%; */
   z-index: 1000;
+}
+
+.banner-image{
+  position: absolute;
 }
 
 
