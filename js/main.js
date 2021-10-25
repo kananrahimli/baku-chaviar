@@ -4,6 +4,9 @@
  var bannerDatas = [
     
 ]
+var gallery1=[
+
+]
 
 
 $(document).ready( async function(){
@@ -25,8 +28,6 @@ $(document).ready( async function(){
           bannerDatas=demo;
           console.log(bannerDatas);
 
-     
-    
     
 
    await bannerDatas.forEach((data) => {
@@ -40,22 +41,46 @@ $(document).ready( async function(){
         </div>
          </div>
    `)
-
     })
 
-    // new Swiper(".mySwiper2", {
+
+        var resAbout = await fetch('https://baku-caviar-ba330-default-rtdb.firebaseio.com/dataCountAbout.json')
+        var responseDataAbout= await resAbout.json()
+
+        var demoAbout=[]
+        for (const key in responseDataAbout) {
+            let blog = {
+              id: responseDataAbout[key].id,
+              title: responseDataAbout[key].title,
+              photo:responseDataAbout[key].imageUrl,
+            };
+    
+            demoAbout.push(blog);
+          }
+
+          gallery1=demoAbout;
+
+
+          console.log(gallery1);
         
-    //     navigation: {
-    //         nextEl: ".mySwiper2 .swiper-button-next",
-    //         prevEl: ".mySwiper2  .swiper-button-prev",
-    //     },
-    //     // pagination: {
-    //     //     el: '.mySwiper2 .swiper-pagination',
-    //     //     clickable: true,
-    //     // },
-    //     // speed: 2000,
-    //     // autoplay: true
-    // });
+          await gallery1.forEach(function(gallery){
+            $('#gallery1').append(`
+            <div class="swiper-slide banner-swiper-slide1" >
+            <a href="${gallery.photo}" data-lightbox="mygallery">
+                <img src="${gallery.photo}" alt="">
+            </a>
+            
+        </div>
+            `)
+          })
+
+          await $('#gallery-text1').html(`
+            ${gallery1[0].title}
+          `)
+
+
+
+      
 
     new Swiper("#banner-swiper", {
         // direction: "vertical",
