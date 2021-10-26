@@ -111,7 +111,7 @@ $(document).ready( async function(){
               `)
             })
   
-            await $('#gallery-text1').html(`
+            await $('#gallery-text2').html(`
               ${gallery2[0].title}
             `)
 
