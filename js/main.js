@@ -8,6 +8,8 @@ var gallery1=[
 
 ]
 
+var gallery2=[]
+
 
 $(document).ready( async function(){
     
@@ -77,6 +79,41 @@ $(document).ready( async function(){
           await $('#gallery-text1').html(`
             ${gallery1[0].title}
           `)
+
+
+
+
+          var resHeritage = await fetch('https://baku-caviar-ba330-default-rtdb.firebaseio.com/dataCountHeritage.json')
+          var responseDataHeritage= await resHeritage.json()
+  
+          var demoHeritage=[]
+          for (const key in responseDataHeritage) {
+              let blog = {
+                id: responseDataHeritage[key].id,
+                title: responseDataHeritage[key].title,
+                photo:responseDataHeritage[key].imageUrl,
+              };
+      
+              demoHeritage.push(blog);
+            }
+  
+            gallery2=demoHeritage;
+  
+          
+            await gallery2.forEach(function(gallery){
+              $('#gallery2').append(`
+              <div class="swiper-slide banner-swiper-slide1" >
+              <a href="${gallery.photo}" data-lightbox="mygallery1">
+                  <img src="${gallery.photo}" alt="">
+              </a>
+              
+          </div>
+              `)
+            })
+  
+            await $('#gallery-text1').html(`
+              ${gallery2[0].title}
+            `)
 
 
 
