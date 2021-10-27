@@ -1,14 +1,11 @@
 
 // import { realDb } from "./firebase";
 
- var bannerDatas = [
-    
-]
-var gallery1=[
-
-]
-
-var gallery2=[]
+var bannerDatas = [];
+var gallery1=[];
+var gallery2=[];
+var ourCaviar=[];
+var contact=[];
 
 
 $(document).ready( async function(){
@@ -116,6 +113,60 @@ $(document).ready( async function(){
             `)
 
 
+
+        
+            var resOurCaviar = await fetch('https://baku-caviar-ba330-default-rtdb.firebaseio.com/dataCountOurCaviar.json')
+            var responseDataOurCaviar= await resOurCaviar.json()
+    
+            var demoOurCaviar=[]
+            for (const key in responseDataOurCaviar) {
+                let blog = {
+                //   id: responseDataOurCaviar[key].id,
+                //   title: responseDataOurCaviar[key].title,
+                  photo:responseDataOurCaviar[key].imageUrl,
+                };
+        
+                demoOurCaviar.push(blog);
+              }
+    
+              ourCaviar= await demoOurCaviar;
+            
+              
+                $('.box1').prepend(`
+                <div class="logo-img"><img src="${ourCaviar[0].photo}" alt=""></div>
+                `)
+                $('.box2').prepend(`
+                <div class="logo-img"><img src="${ourCaviar[1].photo}" alt=""></div>
+                `)
+                $('.box3').prepend(`
+                <div class="logo-img"><img src="${ourCaviar[2].photo}" alt=""></div>
+                `)
+                $('.box4').prepend(`
+                <div class="logo-img"><img src="${ourCaviar[3].photo}" alt=""></div>
+                `)
+             
+    
+  
+                var resOurContact = await fetch('https://baku-caviar-ba330-default-rtdb.firebaseio.com/dataCountContact.json')
+                var responseDataContact= await resOurContact.json()
+        
+                var demoContact=[]
+                for (const key in responseDataContact) {
+                    let blog = {
+                    //   id: responseDataOurCaviar[key].id,
+                      title: responseDataContact[key].title,
+                    //   photo:responseDataOurCaviar[key].imageUrl,
+                    };
+            
+                    demoContact.push(blog);
+                  }
+        
+                  contact= await demoContact;
+
+                  $('.call').append(`
+                   <a href="${"tel"+":"+ contact[0].title}">${contact[0].title}</a>
+                  `)
+                
 
       
 
