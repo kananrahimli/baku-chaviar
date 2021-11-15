@@ -10,7 +10,7 @@ var contact=[];
 
 $(document).ready( async function(){
     
-        var response = await fetch('https://baku-caviar-ba330-default-rtdb.firebaseio.com/dataCount.json')
+        var response = await fetch('https://baku-caviar-ba330-default-rtdb.firebaseio.com/dataCountRu.json')
         var responseData= await response.json()
 
         var demo=[]
@@ -43,7 +43,7 @@ $(document).ready( async function(){
     })
 
 
-        var resAbout = await fetch('https://baku-caviar-ba330-default-rtdb.firebaseio.com/dataCountAbout.json')
+        var resAbout = await fetch('https://baku-caviar-ba330-default-rtdb.firebaseio.com/dataCountAboutRu.json')
         var responseDataAbout= await resAbout.json()
 
         var demoAbout=[]
@@ -80,7 +80,7 @@ $(document).ready( async function(){
 
 
 
-          var resHeritage = await fetch('https://baku-caviar-ba330-default-rtdb.firebaseio.com/dataCountHeritage.json')
+          var resHeritage = await fetch('https://baku-caviar-ba330-default-rtdb.firebaseio.com/dataCountHeritageRu.json')
           var responseDataHeritage= await resHeritage.json()
   
           var demoHeritage=[]
@@ -115,7 +115,7 @@ $(document).ready( async function(){
 
 
         
-            var resOurCaviar = await fetch('https://baku-caviar-ba330-default-rtdb.firebaseio.com/dataCountOurCaviar.json')
+            var resOurCaviar = await fetch('https://baku-caviar-ba330-default-rtdb.firebaseio.com/dataCountOurCaviarRu.json')
             var responseDataOurCaviar= await resOurCaviar.json()
     
             var demoOurCaviar=[]
@@ -147,7 +147,7 @@ $(document).ready( async function(){
              
     
   
-                var resOurContact = await fetch('https://baku-caviar-ba330-default-rtdb.firebaseio.com/dataCountContact.json')
+                var resOurContact = await fetch('https://baku-caviar-ba330-default-rtdb.firebaseio.com/dataCountContactRu.json')
                 var responseDataContact= await resOurContact.json()
         
                 var demoContact=[]
