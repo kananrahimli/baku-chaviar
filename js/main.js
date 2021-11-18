@@ -181,6 +181,9 @@ $(document).ready( async function(){
                   $('.call').append(`
                    <a href="${"tel"+":"+ contact[0].title}">${contact[0].title}</a>
                   `)
+                  $('.footer-phone').append(`
+                   <a href="${"tel"+":"+ contact[0].title}">${contact[0].title}</a>
+                  `)
 
 
 
