@@ -41,5 +41,5 @@ setTimeout(() => {
             clickable: true,
         },
     });
-}, 3000);
+}, 8000);
 

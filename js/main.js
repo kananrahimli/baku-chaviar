@@ -6,6 +6,8 @@ var gallery1=[];
 var gallery2=[];
 var ourCaviar=[];
 var contact=[];
+var careNature=[];
+var whereBuy=[];
 
 
 $(document).ready( async function(){
@@ -122,7 +124,7 @@ $(document).ready( async function(){
             for (const key in responseDataOurCaviar) {
                 let blog = {
                 //   id: responseDataOurCaviar[key].id,
-                //   title: responseDataOurCaviar[key].title,
+                  title: responseDataOurCaviar[key].title,
                   photo:responseDataOurCaviar[key].imageUrl,
                 };
         
@@ -143,6 +145,19 @@ $(document).ready( async function(){
                 `)
                 $('.box4').prepend(`
                 <div class="logo-img"><img src="${ourCaviar[3].photo}" alt=""></div>
+                `)
+
+                $('.box1').append(`
+                <p class="lang" key="caviar_text_1">${ourCaviar[0].title}</p>
+                `)
+                $('.box2').append(`
+                <p class="lang" key="caviar_text_3">${ourCaviar[1].title}</p>
+                `)
+                $('.box3').append(`
+                <p class="lang" key="caviar_text_4">${ourCaviar[2].title}</p>
+                `)
+                $('.box4').append(`
+                <p class="lang" key="caviar_text_5">${ourCaviar[3].title}</p>
                 `)
              
     
@@ -166,7 +181,81 @@ $(document).ready( async function(){
                   $('.call').append(`
                    <a href="${"tel"+":"+ contact[0].title}">${contact[0].title}</a>
                   `)
+
+
+
                 
+
+                  var resCareNature = await fetch('https://baku-caviar-ba330-default-rtdb.firebaseio.com/dataCountCareNatureRu.json')
+                  var responseDataCareNature= await resCareNature.json()
+          
+                  var demoCareNature=[]
+                  for (const key in responseDataCareNature) {
+                      let blog = {
+                        id: responseDataCareNature[key].id,
+                        title: responseDataCareNature[key].title,
+                        photo:responseDataCareNature[key].imageUrl,
+                      };
+              
+                      demoCareNature.push(blog);
+                    }
+          
+                    careNature=demoCareNature;
+          
+                    await $('.third_img_bg').append(
+                        `
+                        <img src="${careNature[0].photo}" alt="">
+                        `
+                    )
+
+                    await  $('.text1').append(`
+                    <p class="lang" key="" class="nature_text_1">${careNature[0].title}</p>
+                    `)
+                    await $('.text2').append(`
+                    <p class="lang" key="" class="nature_text_2">${careNature[1].title}</p>
+                    `)
+
+
+                    
+                    
+
+                    var responseWhereBuy= await fetch('https://baku-caviar-ba330-default-rtdb.firebaseio.com/dataCountWhereBuyRu.json')
+                    var responseDataWhereBuy= await responseWhereBuy.json()
+            
+                    var demoWhereBuy=[]
+                    for (const key in responseDataWhereBuy) {
+                        let blog = {
+                          id: responseDataWhereBuy[key].id,
+                          title: responseDataWhereBuy[key].title,
+                          photo:responseDataWhereBuy[key].imageUrl,
+                        };
+                
+                        demoWhereBuy.push(blog);
+                      }
+            
+                      whereBuy=demoWhereBuy;
+                      
+                      console.log(whereBuy);
+                
+                
+
+                   await whereBuy.forEach((data) => {
+                        $('.last-swiper-wrapper').append(`
+                        <div class="swiper-slide last-swiper-slide"
+                        s>
+                        <img src="${data.photo}" class="banner-image" alt="">
+                        
+                         </div>
+                   `)
+                    })
+
+                    await $('.title-container').append(`
+                    
+                    <p class="lang" key="buy_text">${whereBuy[0].title}</p>
+                    `)
+            
+              
+            
 
       
 
